@@ -16,6 +16,10 @@
     <!-- BootStrap -->
     <script src="../javascript/problems_on_trains_01.js"></script>
 
+    <!-- MathJX -->
+    <SCRIPT SRC='https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></SCRIPT>
+    <SCRIPT>MathJax.Hub.Config({ tex2jax: {inlineMath: [['$$','$$'], ['\\(','\\)']]}})</SCRIPT>
+
     <script>
         for(let val in problems){
             console.log(problems[val]["id"]);
@@ -31,24 +35,52 @@
     <div class="container bg-light">
         <div class="row questions_answers">
             <div class="col-lg-8 col-sm-12 pt-4">
-                <div class="card bg-info">
+                <div class="card">
                     <div class="card-body pt-0">
-                        <div class="questions_01">
+                        <div class="questions_01 bg-success">
                             <p>
                                 1. A train running at the speed of 60 km/hr crosses a pole in 9 seconds. What is the length of the train?
                             </p>
-                            <div  style="padding-left:2%;">
-                                <p class="p-0 m-0" >1. Problems on Trains</p>
-                                <p class="p-0 m-0">2. Time and Distance</p>
-                                <p class="p-0 m-0">3. Time and Work</p>
-                                <p class="p-0 m-0">4. Percentage</p>
-                                <h1>Helloe</h1>
+                            <div >
+                                <form style="padding-left:4%;">
+                                    <input type="radio" name="fav_language" value="HTcdfML">
+                                    <label for="cd">A) Option One</label><br>
+                                    <input type="radio" name="fav_language" value="HTcdfML">
+                                    <label for="cd">B) Option Two</label><br>
+                                    <input type="radio" name="fav_language" value="HTcdfML">
+                                    <label for="cd">C) Option Three</label><br>
+                                    <input type="radio" name="fav_language" value="HTcdfML">
+                                    <label for="cd">D) Option Four</label><br>
+                                     
+                                </form> 
                             </div>
-                            <div class="answer" style="padding-left:2%;">
-                                <img src="../images/problem_1.png" alt="" style="width:100%;height: auto;">
+                            <hr class="p-0 m-0">
+                            <div class="answer" style=" font-size: 14px;">
+                                <div class="row">
+                                    <div class="col-6 bg-white">
+                                        $$\eqalign{
+                                            & {\text{Speed}} = \left( {60 \times \frac{5}{{18}}} \right){\text{m/sec}} =  {\frac{{50}}{3}} {\text{m/sec}}  \cr 
+                                            & {\text{Length}}\,{\text{of}}\,{\text{the}}\,{\text{train}} = \left( {{\text{Speed}} \times {\text{Time}}} \right)  \cr 
+                                            & \therefore {\text{Length}}\,{\text{of}}\,{\text{the}}\,{\text{train}}  \cr 
+                                            &  = \left( {\frac{{50}}{3} \times 9} \right)m = 150m \cr}$$
+                                    </div>
+                                    <div class="col-6 bg-primary">
+                                        <h2>
+                                            Idar kuch nhi aayega
+                                        </h1>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <img src="../images/problem33.jpg" alt="" style="width:100%;height:auto;">
+                                    </div>
+
+                                </div>
+                                <!-- <img src="../images/problem_1.png" alt="" style="width:100%;height:auto;"> -->
                             </div>
                         </div> 
-                        <hr>
+                        <hr class="p-0 m-0">
+                        
                     </div>
                 </div>
             </div>
