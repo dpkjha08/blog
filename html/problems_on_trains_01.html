@@ -17,69 +17,73 @@
     <script src="../javascript/problems_on_trains_01.js"></script>
 
     <!-- MathJX -->
-    <SCRIPT SRC='https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></SCRIPT>
+    <!-- <script src="../math/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+    <SCRIPT async SRC='https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></SCRIPT>
     <SCRIPT>MathJax.Hub.Config({ tex2jax: {inlineMath: [['$$','$$'], ['\\(','\\)']]}})</SCRIPT>
     <script src="../javascript/background.js">
     </script>
-
     <style>
         
-    .btn_answer{
-        border-color: gray;
+    div.options{
+        border: 1px solid black;
+        border-radius: 5px;
     }
-    .btn_answer:hover{
+    .options:hover{
         background-color: rgb(226,227,229);
     }
     </style>
 </head>
-<body>
-    <nav class="container sticky-top">
+<body class="bg-light">
+    <nav class="container-fluid">
         <div class="row p-2" style="background-color:#0bbb9b; box-shadow: 0px 0px 10px 0px rgba(82, 63, 105, 0.1);">
-            <h1 style="color: #fff;">
+            <h1 style="color: #172738;">
                 EasyAptitude
             </h1>
         </div>
     </nav>
-    <div class="container bg-light"> 
+    <nav class="container-fluid sticky-top">
+        <div class="row" style="background-color:#172738;  box-shadow: 0px 0px 10px 0px rgba(82, 63, 105, 0.1);">
+            <h4 style="color: #0bbb9b;">
+                EasyAptitude
+            </h4>
+        </div>
+    </nav>
+    
+    <div class="container"> 
         <div class="row">
             <div class="first col-lg-8 col-sm-12 pt-4">
                 <div class="card">
-                    <div class="card-body pt-2">
+                    <div class="card-body pt-2" id="main_body">
                         <div class="question_1">
-                            <h5>
-                                <div class="row pb-2">
-                                        <div class="col-12 mb-2">1] A train running at the speed of 60 km/hr crosses a pole in 9 seconds. What is the length of the train?</div>
-
+                            
+                            <div class="row pb-2">
+                                <div class="col-12 mb-2" >
+                                    <h5>
+                                        1] A train running at the speed of 60 km/hr crosses a pole in 9 seconds. What is the length of the train?
+                                    </h5>
                                 </div>
-                                <div class="row p-3 pt-0">
-                                    <button class="btn btn_answer text-start" id="1.1" onclick="getAnswer(0,'1.1')">
-                                        <div class="col-12">
-                                            A] 120 meters 
-                                        </div>
-                                    </button>
+                            </div>
+                            <div class="row p-3 pt-0">
+                                <div class="col-12 p-2 options" id="1.1" onclick="getAnswer(0,'1.1')">
+                                <p class="m-0 p-0"> A] 120 meters </p>
                                 </div>
-                                <div class="row p-3 pt-0">
-                                    <button class="btn btn_answer text-start" id="1.2" onclick="getAnswer(0,'1.2')">
-                                        <div class="col-12">
-                                            B] 180 meters
-                                        </div>
-                                    </button>
+                            </div>
+                            <div class="row p-3 pt-0">
+                                <div class="col-12 p-2 options" id="1.2" onclick="getAnswer(0,'1.2')">
+                                <p class="m-0 p-0"> B] 120 meters </p>
                                 </div>
-                                <div class="row p-3 pt-0">
-                                    <button class="btn btn_answer text-start" id="1.3" onclick="getAnswer(0,'1.3')">
-                                        <div class="col-12">
-                                            C] 324 meters
-                                        </div>
-                                    </button>
+                            </div>
+                            <div class="row p-3 pt-0">
+                                <div class="col-12 p-2 options" id="1.3" onclick="getAnswer(1,'1.3')">
+                                <p class="m-0 p-0"> C] 120 meters </p>
                                 </div>
-                                <div class="row p-3 pt-0 pb-1">
-                                    <button class="btn btn_answer text-start" id="1.4" onclick="getAnswer(1,'1.4')">
-                                        <div class="col-12">
-                                            D] 150 meters
-                                        </div>
-                                    </button>
-                                </div>                        
-                            </h5>
+                            </div>
+                            <div class="row p-3 pt-0">
+                                <div class="col-12 p-2 options" id="1.4" onclick="getAnswer(0,'1.4')">
+                                <p class="m-0 p-0"> D] 120 meters </p>
+                                </div>
+                            </div>                      
+                            
                             <div class="answer_1" id="answer_1" style="display:none;">
                                 <hr class="p-0 m-0">
                                 <div class="row pt-1">
@@ -91,11 +95,21 @@
                                 </div>
                                 <div class="row">
                                     <div class="col-lg-6 col-sm-12 bg-white" id="latex" style="font-size:0.8rem; color:rgb(78, 78, 78);"> 
-                                        $$\eqalign{
-                                            & {\text{Speed}} = \left( {60 \times \frac{5}{{18}}} \right){\text{m/sec}} =  {\frac{{50}}{3}} {\text{m/sec}}  \cr 
-                                            & {\text{Length}}\,{\text{of}}\,{\text{the}}\,{\text{train}} = \left( {{\text{Speed}} \times {\text{Time}}} \right)  \cr 
-                                            & \therefore {\text{Length}}\,{\text{of}}\,{\text{the}}\,{\text{train}}  \cr 
-                                            &  = \left( {\frac{{50}}{3} \times 9} \right)m = 150m \cr}$$
+                                        <p>$$
+                                            \eqalign{
+                                            & {\text{Speed of the train relative to man}}\cr 
+                                            &  =  {\frac{{125}}{{10}}} {\text{ m/sec}}  \cr 
+                                            &  =  {\frac{{25}}{2}} {\text{ m/sec}}  \cr 
+                                            &  =  {\frac{{25}}{2} \times \frac{{18}}{5}} {\text{ km/hr}}  \cr 
+                                            &  = 45\,{\text{km/hr}}  \cr 
+                                            & {\text{Let}}\,{\text{the}}\,{\text{speed}}\,{\text{of}}\,{\text{the}}\,{\text{train}}\,{\text{be}}\,x\,{\text{km/hr}}.  \cr 
+                                            & \text{Then, relative speed} = \left( {x - 5} \right)\,{\text{km/hr}}  \cr 
+                                            & \therefore x - 5 = 45  \cr
+                                            & \Rightarrow x = 50\,{\text{km/hr}} \cr} 
+                                        $$  
+
+                                        $$
+                                        </p>                
                                     </div>
                                 </div>
                             </div>
@@ -149,7 +163,7 @@
                                 </div>
                                 <div class="row p-3 pt-0 pb-1">
                                     <button class="btn btn_answer text-start" id="2.4" onclick="getAnswer(0,'2.4')">
-                                        <div class="col-12">
+                                        <div class="col-12 btn_answer">
                                             D] 55 km/hr
                                         </div>
                                     </button>
@@ -205,6 +219,6 @@
                 </div>
             </div>
         </div>
-    </div> -->
+    </div> 
 </body>
 </html>

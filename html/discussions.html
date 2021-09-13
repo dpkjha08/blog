@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../javascript/problems_on_trains_discussion.js"></script>
+    <script>
+        for(let val in discussion){
+            console.log(discussion[val]["name"]);
+            console.log(discussion[val]["disc"]);
+            console.log(discussion[val]["date"]);
+        }
+
+        function addDiscussion(e){
+            e.preventDefault();
+            var name = document.getElementById('name').value;
+            var disc = document.getElementById('disc').value;
+            var date =  new Date().toISOString().slice(0, 10);
+            discussion.push({id:"2",name:name,disc:disc,date:date});    
+            for(let val in discussion){
+            console.log(discussion[val]["name"]);
+            console.log(discussion[val]["disc"]);
+            console.log(discussion[val]["date"]);
+        }
+
+        }
+    </script>
+</head>
+<body>
+    <form onsubmit="addDiscussion(event)" >
+        <input type="text" id="name" name="name">
+        <input type="text" id="disc" name="disc">
+        <input type="submit" value="Submit">
+    </form>
+
+    
+</body>
+</html>

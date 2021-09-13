@@ -2767,13 +2767,13 @@ if (document.getElementById && document.childNodes && document.createElement) {
                 if (MathJax.Hub.config.showMathMenu) {
                     if (!MathJax.Extension.MathMenu) {
                         setTimeout(function() {
-                            MathJax.Callback.Queue(["Require", MathJax.Ajax, "[MathJax]/extensions/MathMenu.js", {}], ["loadDomain", MathJax.Localization, "MathMenu"])
+                            // MathJax.Callback.Queue(["Require", MathJax.Ajax, "[MathJax]/extensions/MathMenu.js", {}], ["loadDomain", MathJax.Localization, "MathMenu"])
                         }, 1000)
                     } else {
                         setTimeout(MathJax.Callback(["loadDomain", MathJax.Localization, "MathMenu"]), 1000)
                     }
                     if (!MathJax.Extension.MathZoom) {
-                        setTimeout(MathJax.Callback(["Require", MathJax.Ajax, "[MathJax]/extensions/MathZoom.js", {}]), 2000)
+                        // setTimeout(MathJax.Callback(["Require", MathJax.Ajax, "[MathJax]/extensions/MathZoom.js", {}]), 2000)
                     }
                 }
             },
